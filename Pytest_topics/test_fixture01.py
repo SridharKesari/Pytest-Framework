@@ -2,7 +2,7 @@ import pytest
 
 
 @pytest.fixture()
-def setup_list():
+def setup_list():   # before running test, setup
     print("\n in fixtures..\n")
     city = ['New York', 'London', 'Bengaluru', 'Washington', 'Hubli']
     return city
