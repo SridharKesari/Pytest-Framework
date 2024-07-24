@@ -1,0 +1,4 @@
+2024-07-25 02:01:40 [ WARNING] [Pytest_topics.test_loggings] Warning logs (test_loggings.py:5)
+2024-07-25 02:01:40 [   ERROR] [Pytest_topics.test_loggings] Error logs (test_loggings.py:6)
+2024-07-25 02:01:40 [CRITICAL] [Pytest_topics.test_loggings] Critical logs (test_loggings.py:7)
+2024-07-25 02:01:40 [    INFO] [Pytest_topics.test_loggings] Info logs (test_loggings.py:8)

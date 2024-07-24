@@ -1,5 +1,8 @@
 from utils.libutils import getAPIData, postAPIData, putAPIData, deleteAPIData
 from utils.config_parser import getPetAPIURL
+import logging
+# use getLogger()
+LOGGER = logging.getLogger(__name__)
 
 # baseURI = 'https://petstore.swagger.io/v2/pet/'
 petID = '191'
@@ -27,6 +30,7 @@ def test_getPetById_response():
 def test_updating_pet():
     payload = {'id': int(petID), 'name': 'Sweety', 'status': 'pending'}
     data, resp_status, timeTaken = putAPIData(baseURI, payload)
+    LOGGER.info('API call done')
     assert data['id'] == int(petID)
     print(data)
     print(f'Time Taken: {timeTaken}')
