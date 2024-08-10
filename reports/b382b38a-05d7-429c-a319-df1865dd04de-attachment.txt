@@ -1,0 +1,8 @@
+RequestURL: https://petstore.swagger.io/v2/pet/191
+{
+    "id": 191,
+    "name": "Sweety",
+    "photoUrls": [],
+    "tags": [],
+    "status": "pending"
+}

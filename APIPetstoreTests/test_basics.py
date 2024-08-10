@@ -1,4 +1,6 @@
 import json
+
+import allure
 import requests
 
 baseURI = 'https://petstore.swagger.io/v2/pet/'
@@ -17,6 +19,7 @@ def test_getPetById_response():
     assert len(data) > 0, 'Empty Response'
 
 
+@allure.step('Doing get pet by ID Tests')
 # testing response body for 'ID' key
 def test_getPetById_id():
     url = baseURI + petID

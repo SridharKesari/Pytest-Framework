@@ -5,17 +5,21 @@ from pathlib import Path
 
 cfgFile = 'pets_qa.ini'
 cfgFileDir = 'config'
+cfgFileFlaskApp = 'apiserverqa.ini'
 
 # config = ConfigParser()  # import configparser then use configparser.ConfigParser()
 
 BASE_DIR = Path(__file__).resolve().parent.parent  # import pathlib then use pathlib.Path(__file__)
-print(BASE_DIR)
+print(BASE_DIR)  # D:\PythonWorkspace\Pytest-Framework
 CONFIG_FILE = BASE_DIR.joinpath(cfgFileDir).joinpath(cfgFile)
-print(CONFIG_FILE)
+print(CONFIG_FILE)  # D:\PythonWorkspace\Pytest-Framework\config\pets_qa.ini
+CONFIG_FILE_FLASKAPP = BASE_DIR.joinpath(cfgFileDir).joinpath(cfgFileFlaskApp)
 
 config = ConfigParser()
-# read the config file
-config.read(CONFIG_FILE)
+config.read(CONFIG_FILE)  # read the config file
+
+configFlaskApp = ConfigParser()
+configFlaskApp.read(CONFIG_FILE_FLASKAPP)
 
 
 def getPetAPIURL():
@@ -26,8 +30,14 @@ def getStoreAPIURL():
     return config['store']['url']
 
 
+def getFlaskAppBaseURL():
+    baseURL = 'http://' + configFlaskApp['flaskapp']['url'] + ':' + configFlaskApp['flaskapp']['port'] + '/api/'
+    return baseURL
+
+
 print(getPetAPIURL())
 print(getStoreAPIURL())
+print(getFlaskAppBaseURL())
 
 
 def getSridharDetails():

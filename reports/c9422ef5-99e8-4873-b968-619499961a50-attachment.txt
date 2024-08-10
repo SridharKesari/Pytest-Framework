@@ -1,0 +1,3 @@
+RequestURL for post: https://petstore.swagger.io/v2/pet/
+{'id': 191, 'name': 'Cutie', 'photoUrls': [], 'tags': [], 'status': 'available'}
+Time Taken: 0.899031

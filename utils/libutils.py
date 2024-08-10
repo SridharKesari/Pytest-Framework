@@ -1,4 +1,6 @@
 import json
+
+import allure
 import requests
 
 
@@ -25,6 +27,7 @@ def postAPIData(url, petID, name, status):
     return data, response.status_code, timeTaken
 
 
+@allure.step('Doing Put Data')
 # put API call
 def putAPIData(url, body):
     header = {'Content-Type': 'application/json'}

@@ -1,0 +1,4 @@
+RequestURL for delete: https://petstore.swagger.io/v2/pet/191
+{'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'api_key': 'key1', 'Content-Length': '0'}
+{'code': 200, 'type': 'unknown', 'message': '191'}
+Time Taken: 0.868031
